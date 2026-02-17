@@ -350,8 +350,8 @@ document.addEventListener("copy", function () {
     new Vue({
       data: function () {
         this.$notify({
-          title: "哎嘿！复制成功🍬",
-          message: "若要转载最好保留原文链接哦，给你一个大大的赞！",
+          title: "复制成功",
+          message: "多领悟其中的话",
           position: 'top-left',
           offset: 50,
           showClose: true,
@@ -676,8 +676,8 @@ if (document.body.clientWidth > 992) {
         zoom: 0.9,
         borderRadius: 5 + 'px',
         right: 55.6 + 'px',
-        nekoImg: "https://bu.dusays.com/2022/07/20/62d812db74be9.png",
-        hoverMsg: "春天啦~",
+        nekoImg: "https://ibb.co/tp2X6YFc",
+        hoverMsg: "好好学习",
         color: "var(--theme-color)",
         during: 500,
         blog_body: "body",
