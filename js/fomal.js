@@ -2999,18 +2999,22 @@ function setColor(c) {
 }
 
 
-// 星空背景开关
-if (localStorage.getItem("universe") == undefined) {
-  localStorage.setItem("universe", "block");
+// 星空背景开关（已默认关闭）
+// 为了彻底去掉星空背景，这里强制设为 none，并覆盖本地存储
+if (document.getElementById("universe")) {
+  document.getElementById("universe").style.display = "none";
 }
-setUniverse2(localStorage.getItem("universe"));
+localStorage.setItem("universe", "none");
 function setUniverse2(c) {
-  document.getElementById("universe").style.display = c;
+  if (document.getElementById("universe")) {
+    document.getElementById("universe").style.display = c;
+  }
   localStorage.setItem("universe", c);
 }
 function setUniverse() {
+  // 如果你以后想重新开启星空，可以把下面的 "none" 和 "block" 按需要改回去
   if (document.getElementById("universeSet").checked) {
-    setUniverse2("block");
+    setUniverse2("none");
   } else {
     setUniverse2("none");
   }

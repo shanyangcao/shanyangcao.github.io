@@ -1393,7 +1393,7 @@ input::placeholder {
   z-index: -999;
   width: 100%;
   height: 100%;
-  background: url(https://u7imgblog.oss-cn-hangzhou.aliyuncs.com/blogbackground/wallhaven-zypmoj.jpg);;
+  background: url(/assets/love.png);;
   background-attachment: local;
   background-position: center;
   background-size: cover;
@@ -5098,7 +5098,7 @@ mjx-container[display],
   border-radius: 5px !important;
 }
 [data-theme="dark"] #web_bg {
-  background: url(https://u7imgblog.oss-cn-hangzhou.aliyuncs.com/blogbackground/wallhaven-3lo9v3.webp);;
+  background: url(/assets/love.png);;
   background-attachment: local;
   background-position: center;
   background-size: cover;
@@ -5106,14 +5106,14 @@ mjx-container[display],
 }
 @media screen and (max-width: 800px) {
   #web_bg {
-    background: url(https://u7imgblog.oss-cn-hangzhou.aliyuncs.com/blogbackground/wallhaven-gpgwde.webp);;
+    background: url(/assets/love.png);;
     background-attachment: local !important;
     background-position: center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
   }
   [data-theme="dark"] #web_bg {
-    background: url(https://u7imgblog.oss-cn-hangzhou.aliyuncs.com/blogbackground/wallhaven-7pkv19.webp);;
+    background: url(/assets/love.png);;
     background-attachment: local !important;
     background-position: center !important;
     background-size: cover !important;
