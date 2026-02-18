@@ -676,7 +676,7 @@ if (document.body.clientWidth > 992) {
         zoom: 0.9,
         borderRadius: 5 + 'px',
         right: 55.6 + 'px',
-        nekoImg: "https://ibb.co/tp2X6YFc",
+        nekoImg: "https://bu.dusays.com/2022/07/20/62d812db74be9.png",
         hoverMsg: "好好学习",
         color: "var(--theme-color)",
         during: 500,
@@ -2805,13 +2805,11 @@ function createtime() {
   var seconds = (now - grt) / 1e3 - 86400 * dnum - 3600 * hnum - 60 * mnum,
     snum = Math.round(seconds);
   1 == String(snum).length && (snum = "0" + snum);
-  let currentTimeHtml = "";
-  (currentTimeHtml =
-    hnum < 18 && hnum >= 9
-      ? `<img class='boardsign' src='https://u7imgblog.oss-cn-hangzhou.aliyuncs.com/blogCoverImg/web下标.svg' title='下班了就该开开心心的玩耍，嘿嘿~'><span class='textTip'> <br><a class='boardsign' style="font-size:15px;font-weight:bold" href="https://beian.miit.gov.cn/#/Integrated/recordQuery" title='浙ICP备-2023007023号'>👮浙ICP备⚠️2023007023号🚓</a><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀<br> <b><font size=2px>可能是这个时代太坏了,感情泛滥,语言没有重量,随便说出口的喜欢与爱，配不上一颗赤诚的❤️‍🔥</font></div>`
-      : `<img class='boardsign' src='https://u7imgblog.oss-cn-hangzhou.aliyuncs.com/blogCoverImg/web下标.svg' title='下班了就该开开心心的玩耍，嘿嘿~'><span class='textTip'> <br><a class='boardsign' style="font-size:15px;font-weight:bold" href="https://beian.miit.gov.cn/#/Integrated/recordQuery" title='浙ICP备-2023007023号'>🚔浙ICP备⚠️2023007023号🚨</a><br> <div style="font-size:13px;font-weight:bold">本站居然运行了 ${dnum} 天 ${hnum} 小时 ${mnum} 分 ${snum} 秒 <i id="heartbeat" class='fas fa-heartbeat'></i> <br> 旅行者 1 号当前距离地球 ${dis} 千米，约为 ${unit} 个天文单位 🚀<br> <b><font size=2px>可能是这个时代太坏了,感情泛滥,语言没有重量,随便说出口的喜欢与爱，配不上一颗赤诚的❤️‍🔥</font></div>`),
-    document.getElementById("workboard") &&
-    (document.getElementById("workboard").innerHTML = currentTimeHtml);
+  // 自定义页脚：只保留 ICP 徽标，不显示运行时间等文字
+  const icpHtml = `<a class='boardsign' style="font-size:15px;font-weight:bold" href="https://beian.miit.gov.cn/#/Integrated/recordQuery" title='浙ICP备-2023007023号'>浙ICP备 2023007023 号</a>`;
+  if (document.getElementById("workboard")) {
+    document.getElementById("workboard").innerHTML = icpHtml;
+  }
 }
 // 设置重复执行函数，周期1000ms
 setInterval(() => {
