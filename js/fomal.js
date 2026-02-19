@@ -676,7 +676,7 @@ if (document.body.clientWidth > 992) {
         zoom: 0.9,
         borderRadius: 5 + 'px',
         right: 55.6 + 'px',
-        nekoImg: "https://bu.dusays.com/2022/07/20/62d812db74be9.png",
+        nekoImg: "https://i.postimg.cc/wxc8VBkm/long-mao.png",
         hoverMsg: "好好学习",
         color: "var(--theme-color)",
         during: 500,
@@ -3022,7 +3022,7 @@ function setUniverse() {
 
 // 雪花开关
 if (localStorage.getItem("snow") == undefined) {
-  localStorage.setItem("snow", "block");
+  localStorage.setItem("snow", "none");
 }
 document.getElementById("snow").style.display = localStorage.getItem("snow");
 function setSnow() {
